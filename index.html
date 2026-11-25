@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psicalma el alma · Inicio</title>
+<meta name="description" content="Psicóloga online en Cáceres. Terapia para sanar heridas del pasado y volver a conectar con tus emociones, vínculos y tu verdadera esencia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,opsz,wght@0,5..1200,400;0,5..1200,500;1,5..1200,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* VOICE  tierno y sereno: mucho aire, líneas finas, frases que respiran (kit Umbral)
+   IDEA   una revista editorial de papel crema: titulares de serif grande, notas en cursiva al margen
+   PICTURE las fotos reales de Cristina (olivo, lago, terraza) como ventanas a un paisaje
+   COLOUR crema #F2EFE5 dominante, agua honda #365C74 para texto, lago #497D9D y cielo #D1E7F1 de apoyo
+   TYPE   Playfair Display (titulares y notas) + DM Sans ligera (texto)
+   LAYOUT bandas a todo el ancho, rejilla de 12 columnas, notas laterales separadas por un filo vertical */
+:root{color-scheme:light dark;
+  --crema:light-dark(#F2EFE5,#14212A);--papel:light-dark(#F7F5EE,#1A2A35);
+  --cielo:light-dark(#D1E7F1,#203747);--lago:light-dark(#497D9D,#8DBAD3);
+  --honda:light-dark(#365C74,#D1E7F1);--tinta:light-dark(#2C4D62,#EDEBE3);
+  --suave:light-dark(#5E7A8C,#A9C0CE);--filo:light-dark(rgba(54,92,116,.22),rgba(209,231,241,.18));
+  --serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--crema);color:var(--tinta);font:300 17px/1.65 var(--sans);overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,18px)}
+.band{padding:clamp(64px,9vw,128px) 0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--honda);margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(44px,6.4vw,88px);line-height:.98}
+h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
+h3{font-size:clamp(22px,2vw,27px);line-height:1.15}
+p{margin:0 0 1em;max-width:62ch}
+.tag{font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--lago);margin:0 0 22px}
+.nota{font:italic 400 17px/1.45 var(--serif);color:var(--lago);border-left:1px solid var(--filo);padding-left:20px;max-width:24ch}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:500 15px/1 var(--sans);text-decoration:none;transition:background .25s,color .25s,border-color .25s}
+.btn-p{background:var(--honda);color:var(--crema)}
+.btn-p:hover{background:var(--lago)}
+.btn-s{border:1px solid var(--honda);color:var(--honda)}
+.btn-s:hover{background:var(--cielo)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--lago);outline-offset:3px}
+.flecha{width:18px;height:10px}
+
+/* cabecera */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--crema) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--filo)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo img{height:38px;width:auto;mix-blend-mode:multiply}
+:root[data-theme=dark] .logo img{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:400}
+nav a{text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a[aria-current]{border-color:var(--lago)}
+.menu-btn{display:none;background:none;border:1px solid var(--filo);border-radius:999px;width:46px;height:46px;color:var(--honda);cursor:pointer}
+.bar .btn{min-height:44px;padding:0 20px;font-size:14px}
+
+/* portada */
+.hero{padding:clamp(44px,6vw,84px) 0 0}
+.hero-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;border-bottom:1px solid var(--filo);padding-bottom:26px}
+.hero-top .tag{margin:0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);padding-top:clamp(28px,4vw,48px);align-items:stretch}
+.hero h1 span{display:block;font-style:italic;color:var(--lago)}
+.hero .sub{font-size:clamp(18px,1.6vw,21px);margin:28px 0 34px;max-width:40ch}
+.acciones{display:flex;flex-wrap:wrap;gap:12px}
+.cita{margin:clamp(40px,6vw,72px) 0 0;display:flex;gap:18px;align-items:baseline}
+.cita q{font:italic 400 clamp(20px,1.9vw,25px)/1.3 var(--serif);color:var(--honda);quotes:"«" "»"}
+.cita cite{font-style:normal;font-size:13px;color:var(--suave);white-space:nowrap}
+.hero-foto{position:relative;border-radius:2px;overflow:hidden;min-height:460px;background:var(--cielo)}
+.hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.hero-foto figcaption{position:absolute;left:18px;bottom:16px;font:500 11px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+
+/* nace de la necesidad */
+.nace{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.nace-foto{position:sticky;top:110px}
+.nace-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:2px}
+.nace-foto .nota{margin-top:18px}
+.lead{font:400 clamp(22px,2.1vw,28px)/1.35 var(--serif);color:var(--honda);max-width:30ch}
+.quiza{list-style:none;margin:40px 0;padding:0;border-top:1px solid var(--filo)}
+.quiza li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:26px 0;border-bottom:1px solid var(--filo)}
+.quiza b{font:italic 400 24px/1.2 var(--serif);color:var(--lago)}
+.quiza p{margin:0}
+.lema{font:400 clamp(30px,3.6vw,46px)/1.1 var(--serif);color:var(--honda);margin:48px 0 32px;max-width:18ch}
+.lema i{color:var(--lago)}
+
+/* cómo te puedo ayudar */
+.ayuda{background:var(--cielo)}
+.ayuda-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.pilares{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--filo)}
+.pilar{padding:36px clamp(20px,2.6vw,40px) 8px 0}
+.pilar+.pilar{border-left:1px solid var(--filo);padding-left:clamp(20px,2.6vw,40px)}
+.pilar svg{width:44px;height:44px;margin-bottom:22px;color:var(--honda)}
+.pilar h3{margin-bottom:16px}
+.pilar p{font-size:16px}
+.ayuda .acciones{margin-top:36px}
+
+/* modalidades */
+.terapia-intro{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.modos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,32px)}
+.modo{background:var(--papel);border:1px solid var(--filo);border-radius:4px;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column}
+.modo .tag{margin-bottom:14px}
+.modo h3{font-size:clamp(28px,2.8vw,38px);margin-bottom:18px}
+.modo ul{list-style:none;margin:8px 0 32px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+.modo li{padding:12px 0;border-bottom:1px solid var(--filo);font-size:16px;display:flex;gap:10px;align-items:baseline}
+.modo li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lago);flex:none;transform:translateY(-2px)}
+.modo .pie{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.modo .aviso{font:italic 400 16px/1.4 var(--serif);color:var(--lago);margin:0 0 22px}
+
+/* testimonios */
+.voces{background:var(--honda);color:var(--crema)}
+.voces h2,.voces .tag{color:var(--crema)}
+.voces .tag{opacity:.75}
+.voces-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.ctrl{display:flex;gap:10px}
+.ctrl button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(242,239,229,.45);background:none;color:var(--crema);cursor:pointer;font-size:18px}
+.ctrl button:hover{background:rgba(242,239,229,.12)}
+.carril{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:rgba(242,239,229,.3) transparent}
+.voz{scroll-snap-align:start;flex:0 0 min(420px,86%);border-top:1px solid rgba(242,239,229,.35);padding-top:28px;margin:0}
+.voz blockquote{margin:0 0 22px;font:400 19px/1.55 var(--serif)}
+.voz figcaption{font-size:14px;letter-spacing:.06em;opacity:.8}
+:root[data-theme=dark] .voces{background:#203747}
+
+/* sobre mí */
+.sobre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center}
+.sobre img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 35%;border-radius:2px}
+.sobre .hola{font:italic 400 clamp(40px,4.6vw,60px)/1 var(--serif);color:var(--lago);margin:0 0 14px}
+.sobre .lead{margin-bottom:28px}
+.rasgos{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 34px;padding:0;list-style:none}
+.rasgos li{border:1px solid var(--filo);border-radius:999px;padding:7px 16px;font-size:14px;color:var(--honda)}
+
+/* contacto */
+.lago{height:clamp(160px,22vw,300px);background:var(--cielo)}
+.lago img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.contacto{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.contacto .acciones{flex-direction:column;align-items:flex-start;margin-top:30px}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+label{display:grid;gap:7px;font-size:13px;font-weight:500;color:var(--honda)}
+.full{grid-column:1/-1}
+input,select,textarea{font:400 16px/1.4 var(--sans);color:var(--tinta);background:var(--papel);border:1px solid var(--filo);border-radius:6px;padding:13px 14px;width:100%;min-height:48px}
+textarea{min-height:120px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--tinta)}
+.check input{width:20px;min-height:20px;height:20px;margin-top:2px;accent-color:var(--honda)}
+form .btn{border:0;cursor:pointer;justify-self:start}
+.ok{grid-column:1/-1;font:italic 400 18px/1.4 var(--serif);color:var(--lago);margin:0;min-height:1.4em}
+.muestra{font-size:13px;color:var(--suave);margin-top:6px}
+
+/* pie */
+footer{border-top:1px solid var(--filo);padding:56px 0 34px;font-size:15px}
+.pie-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
+.pie-grid img{width:260px;mix-blend-mode:multiply}
+:root[data-theme=dark] .pie-grid img{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen}
+footer h4{font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lago);margin:8px 0 18px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:48px;padding-top:22px;border-top:1px solid var(--filo);font-size:13px;color:var(--suave)}
+.legal ul{display:flex;flex-wrap:wrap;gap:18px}
+
+/* aparición suave */
+.rev{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.rev.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1040px){
+  nav{display:none}nav.abierto{display:block;position:absolute;top:76px;left:0;right:0;background:var(--crema);border-bottom:1px solid var(--filo);padding:12px max(5vw,18px) 24px}
+  nav.abierto ul{flex-direction:column;gap:4px;font-size:17px}
+  nav.abierto a{display:block;padding:12px 0}
+  .menu-btn{display:inline-grid;place-items:center}
+  .bar .btn{display:none}
+}
+@media (max-width:860px){
+  .hero-grid,.nace,.sobre,.contacto,.terapia-intro{grid-template-columns:minmax(0,1fr)}
+  .hero-top,.ayuda-head{grid-template-columns:minmax(0,1fr)}
+  .hero-top .nota,.ayuda-head .nota{display:none}
+  .hero-foto{min-height:420px;order:-1}
+  .nace-foto{position:static}
+  .pilares,.modos{grid-template-columns:minmax(0,1fr)}
+  .pilar+.pilar{border-left:0;border-top:1px solid var(--filo);padding-left:0}
+  .pie-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .quiza li{grid-template-columns:minmax(0,1fr);gap:6px}
+  .modo ul,form{grid-template-columns:minmax(0,1fr)}
+  .cita{flex-direction:column;gap:6px}
+  .pie-grid{grid-template-columns:minmax(0,1fr)}
+  .logo img{height:30px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#inicio" aria-label="Psicalma el alma, inicio"><img src="img/logo-linea.jpg" alt="Psicalma el alma"></a>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio" aria-current="page">Inicio</a></li>
+        <li><a href="https://psicalmaelalma.com/sobre-mi-psicalma-el-alma/">Sobre mí</a></li>
+        <li><a href="https://psicalmaelalma.com/psicalma-el-alma-terapias/">Terapias</a></li>
+        <li><a href="https://psicalmaelalma.com/cuentos-para-el-alma-psicalma-el-alma/">Cuentos para el alma</a></li>
+        <li><a href="https://psicalmaelalma.com/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 1h20M0 7h20M0 13h20"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- PORTADA -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <p class="tag">Psicóloga online · Cristina Rosa Gil</p>
+        <p class="nota">Un espacio en el que parar y alejarse del estrés y el bullicio del día a día.</p>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <h1>Terapia para sanar heridas del pasado <span>y volver a conectar.</span></h1>
+          <p class="sub">Con tus emociones, tus vínculos y tu verdadera esencia.</p>
+          <div class="acciones">
+            <a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí
+              <svg class="flecha" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+            <a class="btn btn-s" href="https://wa.me/34685012492">Escríbeme por WhatsApp</a>
+          </div>
+          <div class="cita">
+            <q>No soy lo que me pasó. Soy lo que elijo ser.</q>
+            <cite>Carl Jung</cite>
+          </div>
+        </div>
+        <figure class="hero-foto" style="margin:0">
+          <img src="img/cristina-olivo.jpg" alt="Cristina Rosa Gil, psicóloga, apoyada en un olivo en el campo">
+          <figcaption>Online · Próximamente en Cáceres</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- NACE DE LA NECESIDAD -->
+  <section class="band">
+    <div class="wrap nace">
+      <div class="nace-foto rev">
+        <img src="img/cristina-sombrero.jpg" alt="Cristina sonriendo detrás de un sombrero de paja junto a un lago">
+        <p class="nota">Aquí serás más que un síntoma.</p>
+      </div>
+      <div class="rev">
+        <p class="tag">Psicalma el alma</p>
+        <h2>Un espacio para parar.</h2>
+        <p class="lead" style="margin-top:26px">Psicalma el alma nace de la necesidad de crear un espacio en el que parar y alejarse del estrés y el bullicio del día a día.</p>
+        <ul class="quiza">
+          <li><b>Quizá…</b><p>sientas que llevas mucho tiempo cargando con problemas impuestos por la sociedad que ni siquiera te pertenecen («tienes que verte así, comportarte así, ser así…») y, que si encima les añadimos los problemas propios, el resultado que nos queda es un alma cansada a la que, tal vez, le cueste entender o encontrar el sentido de la vida porque ha aprendido a vivir con su dolor y no conoce nada más, cuando no tiene por qué ser así necesariamente.</p></li>
+          <li><b>Quizá…</b><p>haya pasado algo que no esperabas y simplemente necesitas un espacio para volver a reconectar y sanar ese dolor que está empezando a pesar.</p></li>
+          <li><b>Quizá…</b><p>solo necesites una guía que te ayude a reencontrarte contigx mismx de nuevo.</p></li>
+        </ul>
+        <p>Sea lo que sea que necesites, quiero que entiendas que aquí encontrarás un espacio donde serás más que un síntoma. Aquí seremos simplemente dos almas que se han encontrado en el camino para poder ayudarte a sanar y superar eso que te preocupa.</p>
+        <p class="lema">Porque <i>(p)si calma el alma,</i> es tu sitio.</p>
+        <a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TE PUEDO AYUDAR -->
+  <section class="band ayuda">
+    <div class="wrap">
+      <div class="ayuda-head rev">
+        <div>
+          <p class="tag">Mi enfoque</p>
+          <h2>¿Cómo te puedo ayudar?</h2>
+        </div>
+        <p class="nota">Cuerpo, mente y emoción, con especial cuidado de lo emocional.</p>
+      </div>
+      <div class="pilares">
+        <article class="pilar rev">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="22" cy="22" r="20"/><circle cx="22" cy="22" r="11"/><circle cx="22" cy="22" r="3"/></svg>
+          <h3>Una visión integral de todo tu ser</h3>
+          <p>Trabajaremos desde el cuerpo, mente y emoción, evaluando cuidadosa y respetuosamente tu historia (heridas, emociones no sentidas, traumas, vínculos complejos, situación actual…), pero siempre poniendo especial importancia en el ámbito emocional, ya que una mala gestión o regulación emocional puede llevar a la aparición de diferentes problemas psicológicos que acaban afectando a tu bienestar, calidad de vida y, en definitiva, tu día a día.</p>
+        </article>
+        <article class="pilar rev">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 40V18a14 14 0 0 1 28 0v22"/><path d="M2 40h40"/><path d="M22 40V24"/></svg>
+          <h3>Un tratamiento adaptado a ti</h3>
+          <p>El tratamiento lo adaptaremos a las necesidades de cada persona. De esta forma, crearemos una intervención personalizada y adecuada a tus circunstancias.</p>
+        </article>
+        <article class="pilar rev">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22 40C10 30 4 23 4 15a9 9 0 0 1 18-2 9 9 0 0 1 18 2c0 8-6 15-18 25Z"/><path d="M15 21c3 3 11 3 14 0"/></svg>
+          <h3>Tu bienestar y cuidado, lo más importante</h3>
+          <p>Por ello, sigo formándome en diferentes corrientes que me dan la posibilidad de ofrecer tratamientos y terapias basadas en la evidencia científica y en el modelo biopsicosocial, es decir, teniendo en cuenta todas las áreas que rodean e influyen en tu vida, lo cual me permite acompañarte de la forma más completa posible en tu camino de sanación y crecimiento personal.</p>
+        </article>
+      </div>
+      <div class="acciones">
+        <a class="btn btn-p" href="https://wa.me/34685012492">Contacta conmigo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section class="band" id="terapias">
+    <div class="wrap">
+      <div class="terapia-intro rev">
+        <div>
+          <p class="tag">Modalidades</p>
+          <h2>¿Qué tipo de terapia te va mejor?</h2>
+        </div>
+        <div>
+          <p>Tomar la decisión de comenzar un proceso terapéutico puede llegar a ser muy difícil, así que por eso creo que es vital poder ofrecerte un espacio seguro y un ambiente relajado que me permita ayudarte a que te sientas cómodx al expresar lo que te preocupa.</p>
+          <p style="margin:0">Según tu situación o necesidades, puedes elegir comenzar este proceso desde dos lugares diferentes:</p>
+        </div>
+      </div>
+      <div class="modos">
+        <article class="modo rev">
+          <p class="tag">Desde casa</p>
+          <h3>¿Por qué terapia online?</h3>
+          <p>La terapia online ofrece la posibilidad de ahorrar tiempo, dinero y esfuerzo y así no tener que reorganizar todo tu día para encajar un momento íntimo para ti mismx.</p>
+          <p style="margin:0">Por todo esto y más, la terapia online puede ofrecerte:</p>
+          <ul><li>Flexibilidad</li><li>Comodidad</li><li>Confidencialidad</li><li>Accesibilidad</li><li>Efectividad</li><li>Continuidad del tratamiento</li></ul>
+          <div class="pie">
+            <a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí</a>
+            <a class="btn btn-s" href="https://psicalmaelalma.com/terapia-online/">Saber más</a>
+          </div>
+        </article>
+        <article class="modo rev">
+          <p class="tag">Cara a cara</p>
+          <h3>¿Por qué terapia presencial?</h3>
+          <p>La terapia presencial es una oportunidad única para trabajar en ti mismx desde un espacio seguro y acompañamiento profesional más completo y variado.</p>
+          <p style="margin:0">¿Qué te puede ofrecer la terapia presencial?</p>
+          <ul><li>Conexión humana directa</li><li>Entorno controlado</li><li>Estructura y rutina</li><li>Acceso a recursos en el centro</li><li>Menor distracción</li><li>Terapia más fluida</li></ul>
+          <p class="aviso">Próxima apertura presencial en Cáceres.</p>
+          <div class="pie">
+            <a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí</a>
+            <a class="btn btn-s" href="https://psicalmaelalma.com/terapia-presencial/">Saber más</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="band voces" aria-label="Lo que dicen de mí">
+    <div class="wrap">
+      <div class="voces-head">
+        <div>
+          <p class="tag">Opiniones</p>
+          <h2>Lo que dicen de nosotros</h2>
+        </div>
+        <div class="ctrl">
+          <button type="button" id="prev" aria-label="Opinión anterior">←</button>
+          <button type="button" id="next" aria-label="Opinión siguiente">→</button>
+        </div>
+      </div>
+      <div class="carril" id="carril" tabindex="0"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="band">
+    <div class="wrap sobre">
+      <img class="rev" src="img/cristina-terraza.jpg" alt="Cristina sentada en un sillón de mimbre junto a su portátil">
+      <div class="rev">
+        <p class="tag">Sobre mí</p>
+        <p class="hola">¡Hola!</p>
+        <p class="lead">Soy Cristina y, aunque tengo el título de psicóloga general sanitaria, también soy artista, soñadora, divertida, curiosa, cuidadora, paciente y, sobre todo, persona.</p>
+        <ul class="rasgos"><li>Artista</li><li>Soñadora</li><li>Divertida</li><li>Curiosa</li><li>Cuidadora</li><li>Paciente</li><li>Persona</li></ul>
+        <a class="btn btn-s" href="https://psicalmaelalma.com/sobre-mi-psicalma-el-alma/">Conóceme aquí</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="lago"><img src="img/lago-libro.jpg" alt=""></div>
+
+  <!-- CONTACTO -->
+  <section class="band" id="contacto">
+    <div class="wrap contacto">
+      <div class="rev">
+        <p class="tag">Contacto</p>
+        <h2>Contacta sin compromiso.</h2>
+        <p style="margin-top:22px">Cuéntame un poco sobre ti y te responderé por mail. Si lo prefieres, también puedes reservar directamente tu cita o escribirme por WhatsApp.</p>
+        <div class="acciones">
+          <a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí</a>
+          <a class="btn btn-s" href="https://wa.me/34685012492">WhatsApp · 685 012 492</a>
+        </div>
+      </div>
+      <form id="form" class="rev" novalidate>
+        <label>Nombre<input name="nombre" autocomplete="name" required></label>
+        <label>Edad<input name="edad" inputmode="numeric"></label>
+        <label>Correo electrónico<input name="email" type="email" autocomplete="email" required></label>
+        <label>Teléfono<input name="tel" type="tel" autocomplete="tel"></label>
+        <label>¿Cómo me has conocido?
+          <select name="origen"><option value="">Elige una opción</option><option>Recomendación</option><option>Redes sociales</option><option>Google</option></select></label>
+        <label>¿Es tu primera terapia?
+          <select name="primera"><option value="">Elige una opción</option><option>Sí</option><option>No</option></select></label>
+        <label class="full">Disponibilidad<input name="disponibilidad" placeholder="Por ejemplo: tardes entre semana"></label>
+        <label class="full">Motivo de consulta<textarea name="motivo"></textarea></label>
+        <label class="check full"><input type="checkbox" name="privacidad" required> <span>Acepto la <a href="https://psicalmaelalma.com/politica-de-privacidad-3/">política de privacidad</a>.</span></label>
+        <button class="btn btn-p" type="submit">Enviar</button>
+        <p class="ok" id="ok" role="status"></p>
+      </form>
+    </div>
+    <div class="wrap"><p class="muestra">Formulario de muestra: en WordPress se conectará al formulario de Elementor con la información de protección de datos actual.</p></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pie-grid">
+      <div><img src="img/logo-rosa.jpg" alt="Psicalma el alma · Cristina Rosa Gil, psicóloga"></div>
+      <div>
+        <h4>¿Dónde estamos?</h4>
+        <ul><li>Online</li><li>Próxima apertura presencial en Cáceres</li></ul>
+      </div>
+      <div>
+        <h4>Sígueme en redes</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/psicalmaelalma/">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@psicalmaelalma">TikTok</a></li>
+          <li><a href="https://www.facebook.com/share/18LXpFDVHZ/">Facebook</a></li>
+          <li><a href="http://linkedin.com/in/cristina-rosa-gil-aa5a49232">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empieza aquí</h4>
+        <ul>
+          <li><a href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí</a></li>
+          <li><a href="https://wa.me/34685012492">WhatsApp</a></li>
+          <li><a href="https://psicalmaelalma.com/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>Psicalmaelalma · 2025 · Todos los derechos reservados.</span>
+      <ul>
+        <li><a href="https://psicalmaelalma.com/politica-de-privacidad-3/">Política de privacidad</a></li>
+        <li><a href="https://psicalmaelalma.com/aviso-legal-3/">Aviso legal</a></li>
+        <li><a href="https://psicalmaelalma.com/politica-de-cookies-2/">Política de cookies</a></li>
+        <li><a href="https://psicalmaelalma.com/cumplimiento-normativo-rgpd/">Cumplimiento normativo (RGPD)</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+{
+  const voces = [
+    ["Yaniris S.", "Yo quiero hacer esta reseña a mi psicóloga Cristina el mejor descubrimiento que hice en el año 2023 en diciembre es una persona espectacular y una psicóloga donde la haya superprofesional me ha ayudado en todo y más súper recomendable. Las sesiones con ella son lo mejor aún sabiendo que la terapia es como una montaña rusa, pero siempre está ella ahí. Muchas gracias Cristina"],
+    ["Alicia G.", "Cristina es una excelente profesional, muy amable y empática. Sus explicaciones son coherentes y claras, y te sientes segura desde el primer momento con ella. Además da herramientas y pautas para incorporar en el día a día. Gracias por tu trabajo ☺️"],
+    ["Marta R.", "Todo el mundo necesitamos desahogarnos, y contar nuestras cosas que a veces en el día a día se hacen complicadas. Desde el minuto uno, he estado muy a gusto y comprendida. Cristina me ayuda a gestionar, enfocar las emociones y sentimientos, hablando mucho y con diferentes herramientas. Gracias ❤️"],
+    ["Rosalía D.", "Cristina, es una profesional muy competente. Nos ha ayudado a alcanzar metas, romper bloqueos y explorar sentimientos que no comprendíamos. Es empática, amable y de una gran confianza. A parte de ser una estupenda profesional, es una gran persona, cálida y muy humana. Nos ha ayudado mucho. Sentimos una gran estima hacia ella."],
+    ["Pilar B.", "Mi experiencia con Cristina ha sido increíblemente enriquecedora, creo que es una profesional con mucho talento. Desde la primera sesión conecté con ella (y con mis emociones) lo que me abrió la puerta a mi propio trabajo y crecimiento personal. Me siento muy afortunada de haber llegado a ella y la recomiendo 100 por 100 (siempre que se quiera hacer el trabajo, que es una parte primordial del proceso/progreso). Muchas gracias, Cristina."]
+  ];
+  const esc = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const carril = document.getElementById('carril');
+  carril.innerHTML = voces.map(([n, t]) => `<figure class="voz"><blockquote>«${esc(t)}»</blockquote><figcaption>${esc(n)}</figcaption></figure>`).join('');
+  const paso = dir => {
+    const card = carril.querySelector('.voz');
+    const w = card ? card.getBoundingClientRect().width + 24 : 300;
+    carril.scrollBy({left: dir * w, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  };
+  document.getElementById('prev').addEventListener('click', () => paso(-1));
+  document.getElementById('next').addEventListener('click', () => paso(1));
+  carril.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); paso(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); paso(-1); } });
+
+  const btn = document.getElementById('menuBtn'), menu = document.getElementById('menu');
+  btn.addEventListener('click', () => { const a = menu.classList.toggle('abierto'); btn.setAttribute('aria-expanded', a); });
+  menu.addEventListener('click', e => { if (e.target.closest('a')) { menu.classList.remove('abierto'); btn.setAttribute('aria-expanded', false); } });
+
+  const form = document.getElementById('form'), ok = document.getElementById('ok');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = new FormData(form);
+    if (!d.get('nombre') || !d.get('email') || !d.get('privacidad')) { ok.textContent = 'Falta tu nombre, tu correo o aceptar la política de privacidad.'; return; }
+    ok.textContent = 'Este formulario es de muestra: en la web real llegará a Cristina.';
+  });
+
+  const revs = document.querySelectorAll('.rev');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), {threshold: .12});
+    revs.forEach(r => io.observe(r));
+  } else revs.forEach(r => r.classList.add('in'));
+}
+</script>
+</body>
+</html>
