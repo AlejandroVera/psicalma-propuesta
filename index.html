@@ -58,7 +58,7 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 .bar .btn{min-height:44px;padding:0 20px;font-size:14px}
 
 /* portada */
-.hero{position:relative;padding:clamp(44px,6vw,84px) 0 clamp(48px,6vw,90px);background:var(--crema) url(img/fondo-lago.jpg) center bottom/cover no-repeat;isolation:isolate}
+.hero{position:relative;padding:clamp(44px,6vw,84px) 0 clamp(48px,6vw,90px);background:var(--crema) url(img/lago-olivo.jpg) 70% 60%/cover no-repeat;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,color-mix(in srgb,var(--crema) 94%,transparent) 0%,color-mix(in srgb,var(--crema) 80%,transparent) 48%,color-mix(in srgb,var(--crema) 30%,transparent) 100%)}
 .hero-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;border-bottom:1px solid var(--filo);padding-bottom:26px}
 .btn-s{background:color-mix(in srgb,var(--crema) 70%,transparent)}
@@ -79,6 +79,10 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 .nace-foto{position:sticky;top:110px}
 .nace-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:8px}
 .nace-foto .nota{margin-top:18px}
+.umbral{position:relative;padding-bottom:22%}
+.umbral img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 8px 8px}
+.umbral .peque{position:absolute;right:-6%;bottom:0;width:46%;aspect-ratio:1;border-radius:50%;border:6px solid var(--crema);object-position:50% 35%;box-shadow:0 20px 40px -24px rgba(44,77,98,.5)}
+@media(max-width:860px){.umbral .peque{right:0}}
 .lead{font:500 clamp(24px,2.3vw,31px)/1.32 var(--serif);color:var(--honda);max-width:30ch}
 .quiza{list-style:none;margin:40px 0;padding:0;border-top:1px solid var(--filo)}
 .quiza li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:26px 0;border-bottom:1px solid var(--filo)}
@@ -88,7 +92,7 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 .lema i{color:var(--terra)}
 
 /* cómo te puedo ayudar */
-.ayuda{background:var(--papel) url(img/fondo-papel-sombra.jpg) right top/cover no-repeat}
+.ayuda{background:var(--papel) url(img/sombras-lino.jpg) left top/cover no-repeat}
 :root[data-theme=dark] .ayuda{background:var(--papel)}
 .ayuda-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
 .pilares{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--filo)}
@@ -103,8 +107,9 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 /* modalidades */
 .terapia-intro{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
 .modos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,32px)}
-.modo{background:var(--papel);border:1px solid var(--filo);border-radius:10px;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column}
+.modo{overflow:hidden;background:var(--papel);border:1px solid var(--filo);border-radius:10px;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column}
 .modo .tag{margin-bottom:14px}
+.modo-img{width:calc(100% + 2*clamp(28px,3.4vw,48px));max-width:none;margin:calc(-1*clamp(28px,3.4vw,48px)) calc(-1*clamp(28px,3.4vw,48px)) 26px;aspect-ratio:16/10;object-fit:cover;border-radius:10px 10px 0 0}
 .modo h3{font-size:clamp(28px,2.8vw,38px);margin-bottom:18px}
 .modo ul{list-style:none;margin:8px 0 32px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
 .modo li{padding:12px 0;border-bottom:1px solid var(--filo);font-size:16px;display:flex;gap:10px;align-items:baseline}
@@ -138,6 +143,7 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 .lago img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .contacto{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
 .contacto .acciones{flex-direction:column;align-items:flex-start;margin-top:30px}
+.te{margin-top:36px;width:100%;max-width:380px;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 8px 8px}
 form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
 label{display:grid;gap:7px;font-size:13px;font-weight:500;color:var(--honda)}
 .full{grid-column:1/-1}
@@ -249,7 +255,7 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
   <section class="band">
     <div class="wrap nace">
       <div class="nace-foto rev">
-        <img src="img/cristina-sombrero.jpg" alt="Cristina sonriendo detrás de un sombrero de paja junto a un lago">
+        <div class="umbral"><img src="img/puerta-olivo.jpg" alt="Una puerta de madera abierta a un prado con un olivo"><img class="peque" src="img/cristina-sombrero.jpg" alt="Cristina sonriendo detrás de un sombrero de paja junto a un lago"></div>
         <p class="nota">Aquí serás más que un síntoma.</p>
       </div>
       <div class="rev">
@@ -316,6 +322,7 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
       </div>
       <div class="modos">
         <article class="modo rev">
+          <img class="modo-img" src="img/terapia-online.jpg" alt="Portátil sobre una mesa de madera junto a una ventana con vistas al campo">
           <p class="tag">Desde casa</p>
           <h3>¿Por qué terapia online?</h3>
           <p>La terapia online ofrece la posibilidad de ahorrar tiempo, dinero y esfuerzo y así no tener que reorganizar todo tu día para encajar un momento íntimo para ti mismx.</p>
@@ -327,6 +334,7 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
           </div>
         </article>
         <article class="modo rev">
+          <img class="modo-img" src="img/sala-terapia.jpg" alt="Sala luminosa con dos sillones blancos, una manta azul y ramas de olivo">
           <p class="tag">Cara a cara</p>
           <h3>¿Por qué terapia presencial?</h3>
           <p>La terapia presencial es una oportunidad única para trabajar en ti mismx desde un espacio seguro y acompañamiento profesional más completo y variado.</p>
@@ -386,6 +394,7 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
           <a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí</a>
           <a class="btn btn-s" href="https://wa.me/34685012492">WhatsApp · 685 012 492</a>
         </div>
+        <img class="te" src="img/manos-te.jpg" alt="Manos sujetando una taza de té junto a una ventana, con una rama de olivo y un libro">
       </div>
       <form id="form" class="rev" novalidate>
         <label>Nombre<input name="nombre" autocomplete="name" required></label>
