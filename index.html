@@ -7,20 +7,20 @@
 <meta name="description" content="Psicóloga online en Cáceres. Terapia para sanar heridas del pasado y volver a conectar con tus emociones, vínculos y tu verdadera esencia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,opsz,wght@0,5..1200,400;0,5..1200,500;1,5..1200,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-/* VOICE  tierno y sereno: mucho aire, líneas finas, frases que respiran (kit Umbral)
+/* VOICE  cercano y natural: papel, campo y acuarela, menos clínico (kit Umbral)
    IDEA   una revista editorial de papel crema: titulares de serif grande, notas en cursiva al margen
    PICTURE las fotos reales de Cristina (olivo, lago, terraza) como ventanas a un paisaje
    COLOUR crema #F2EFE5 dominante, agua honda #365C74 para texto, lago #497D9D y cielo #D1E7F1 de apoyo
    TYPE   Playfair Display (titulares y notas) + DM Sans ligera (texto)
    LAYOUT bandas a todo el ancho, rejilla de 12 columnas, notas laterales separadas por un filo vertical */
 :root{color-scheme:light dark;
-  --crema:light-dark(#F2EFE5,#14212A);--papel:light-dark(#F7F5EE,#1A2A35);
+  --crema:light-dark(#FFFDF8,#14212A);--papel:light-dark(#F7F3EA,#1A2A35);--arena:light-dark(#EFE8DA,#1E2E38);--salvia:light-dark(#7E9475,#A9BDA0);--ocre:light-dark(#C9A25E,#D9B97A);--terra:light-dark(#C47C5A,#E0A383);
   --cielo:light-dark(#D1E7F1,#203747);--lago:light-dark(#497D9D,#8DBAD3);
   --honda:light-dark(#365C74,#D1E7F1);--tinta:light-dark(#2C4D62,#EDEBE3);
   --suave:light-dark(#5E7A8C,#A9C0CE);--filo:light-dark(rgba(54,92,116,.22),rgba(209,231,241,.18));
-  --serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
@@ -29,13 +29,13 @@ img{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,18px)}
 .band{padding:clamp(64px,9vw,128px) 0}
-h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--honda);margin:0;text-wrap:balance;letter-spacing:-.01em}
-h1{font-size:clamp(44px,6.4vw,88px);line-height:.98}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--honda);margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(46px,6.6vw,92px);line-height:.96}
 h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
 h3{font-size:clamp(22px,2vw,27px);line-height:1.15}
 p{margin:0 0 1em;max-width:62ch}
-.tag{font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--lago);margin:0 0 22px}
-.nota{font:italic 400 17px/1.45 var(--serif);color:var(--lago);border-left:1px solid var(--filo);padding-left:20px;max-width:24ch}
+.tag{font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--salvia);margin:0 0 22px}
+.nota{font:italic 400 20px/1.4 var(--serif);color:var(--salvia);border-left:1px solid var(--filo);padding-left:20px;max-width:24ch}
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:500 15px/1 var(--sans);text-decoration:none;transition:background .25s,color .25s,border-color .25s}
 .btn-p{background:var(--honda);color:var(--crema)}
 .btn-p:hover{background:var(--lago)}
@@ -47,7 +47,9 @@ p{margin:0 0 1em;max-width:62ch}
 /* cabecera */
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--crema) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--filo)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
-.logo img{height:38px;width:auto;mix-blend-mode:multiply}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:500 26px/1 var(--serif);color:var(--honda);white-space:nowrap}
+.logo img{height:46px;width:auto;mix-blend-mode:multiply}
+.logo i{font-weight:400;color:var(--salvia)}
 :root[data-theme=dark] .logo img{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen}
 nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:400}
 nav a{text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}
@@ -56,40 +58,44 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 .bar .btn{min-height:44px;padding:0 20px;font-size:14px}
 
 /* portada */
-.hero{padding:clamp(44px,6vw,84px) 0 0}
+.hero{position:relative;padding:clamp(44px,6vw,84px) 0 clamp(48px,6vw,90px);background:var(--crema) url(img/fondo-dehesa.jpg) center bottom/cover no-repeat;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,color-mix(in srgb,var(--crema) 94%,transparent) 0%,color-mix(in srgb,var(--crema) 80%,transparent) 48%,color-mix(in srgb,var(--crema) 30%,transparent) 100%)}
 .hero-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;border-bottom:1px solid var(--filo);padding-bottom:26px}
+.btn-s{background:color-mix(in srgb,var(--crema) 70%,transparent)}
 .hero-top .tag{margin:0}
 .hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);padding-top:clamp(28px,4vw,48px);align-items:stretch}
-.hero h1 span{display:block;font-style:italic;color:var(--lago)}
+.hero h1 span{display:block;font-style:italic;font-weight:400;color:var(--terra)}
 .hero .sub{font-size:clamp(18px,1.6vw,21px);margin:28px 0 34px;max-width:40ch}
 .acciones{display:flex;flex-wrap:wrap;gap:12px}
 .cita{margin:clamp(40px,6vw,72px) 0 0;display:flex;gap:18px;align-items:baseline}
-.cita q{font:italic 400 clamp(20px,1.9vw,25px)/1.3 var(--serif);color:var(--honda);quotes:"«" "»"}
+.cita q{font:italic 500 clamp(22px,2.1vw,28px)/1.3 var(--serif);color:var(--honda);quotes:"«" "»"}
 .cita cite{font-style:normal;font-size:13px;color:var(--suave);white-space:nowrap}
-.hero-foto{position:relative;border-radius:2px;overflow:hidden;min-height:460px;background:var(--cielo)}
+.hero-foto{position:relative;border-radius:999px 999px 8px 8px;overflow:hidden;min-height:480px;background:var(--cielo);border:8px solid var(--crema);box-shadow:0 30px 60px -36px rgba(44,77,98,.55)}
 .hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
 .hero-foto figcaption{position:absolute;left:18px;bottom:16px;font:500 11px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.35)}
 
 /* nace de la necesidad */
 .nace{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
 .nace-foto{position:sticky;top:110px}
-.nace-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:2px}
+.nace-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:8px}
 .nace-foto .nota{margin-top:18px}
-.lead{font:400 clamp(22px,2.1vw,28px)/1.35 var(--serif);color:var(--honda);max-width:30ch}
+.lead{font:500 clamp(24px,2.3vw,31px)/1.32 var(--serif);color:var(--honda);max-width:30ch}
 .quiza{list-style:none;margin:40px 0;padding:0;border-top:1px solid var(--filo)}
 .quiza li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:26px 0;border-bottom:1px solid var(--filo)}
-.quiza b{font:italic 400 24px/1.2 var(--serif);color:var(--lago)}
+.quiza b{font:italic 500 27px/1.2 var(--serif);color:var(--salvia)}
 .quiza p{margin:0}
-.lema{font:400 clamp(30px,3.6vw,46px)/1.1 var(--serif);color:var(--honda);margin:48px 0 32px;max-width:18ch}
-.lema i{color:var(--lago)}
+.lema{font:500 clamp(34px,4vw,52px)/1.08 var(--serif);color:var(--honda);margin:48px 0 32px;max-width:18ch}
+.lema i{color:var(--terra)}
 
 /* cómo te puedo ayudar */
-.ayuda{background:var(--cielo)}
+.ayuda{background:var(--papel) url(img/fondo-papel-sombra.jpg) right top/cover no-repeat}
+:root[data-theme=dark] .ayuda{background:var(--papel)}
 .ayuda-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
 .pilares{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--filo)}
 .pilar{padding:36px clamp(20px,2.6vw,40px) 8px 0}
+.pilar{background:color-mix(in srgb,var(--crema) 55%,transparent)}
 .pilar+.pilar{border-left:1px solid var(--filo);padding-left:clamp(20px,2.6vw,40px)}
-.pilar svg{width:44px;height:44px;margin-bottom:22px;color:var(--honda)}
+.pilar svg{width:44px;height:44px;margin-bottom:22px;color:var(--salvia)}
 .pilar h3{margin-bottom:16px}
 .pilar p{font-size:16px}
 .ayuda .acciones{margin-top:36px}
@@ -97,36 +103,35 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 /* modalidades */
 .terapia-intro{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
 .modos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,32px)}
-.modo{background:var(--papel);border:1px solid var(--filo);border-radius:4px;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column}
+.modo{background:var(--papel);border:1px solid var(--filo);border-radius:10px;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column}
 .modo .tag{margin-bottom:14px}
 .modo h3{font-size:clamp(28px,2.8vw,38px);margin-bottom:18px}
 .modo ul{list-style:none;margin:8px 0 32px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
 .modo li{padding:12px 0;border-bottom:1px solid var(--filo);font-size:16px;display:flex;gap:10px;align-items:baseline}
-.modo li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lago);flex:none;transform:translateY(-2px)}
+.modo li::before{content:"";width:7px;height:7px;border-radius:50% 0 50% 0;background:var(--salvia);flex:none;transform:translateY(-2px)}
 .modo .pie{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.modo .aviso{font:italic 400 16px/1.4 var(--serif);color:var(--lago);margin:0 0 22px}
+.modo .aviso{font:italic 500 19px/1.4 var(--serif);color:var(--terra);margin:0 0 22px}
 
 /* testimonios */
-.voces{background:var(--honda);color:var(--crema)}
-.voces h2,.voces .tag{color:var(--crema)}
-.voces .tag{opacity:.75}
+.voces{background:var(--arena);color:var(--tinta)}
 .voces-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
 .ctrl{display:flex;gap:10px}
-.ctrl button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(242,239,229,.45);background:none;color:var(--crema);cursor:pointer;font-size:18px}
-.ctrl button:hover{background:rgba(242,239,229,.12)}
-.carril{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:rgba(242,239,229,.3) transparent}
-.voz{scroll-snap-align:start;flex:0 0 min(420px,86%);border-top:1px solid rgba(242,239,229,.35);padding-top:28px;margin:0}
-.voz blockquote{margin:0 0 22px;font:400 19px/1.55 var(--serif)}
-.voz figcaption{font-size:14px;letter-spacing:.06em;opacity:.8}
-:root[data-theme=dark] .voces{background:#203747}
+.ctrl button{width:48px;height:48px;border-radius:50%;border:1px solid var(--filo);background:var(--crema);color:var(--honda);cursor:pointer;font-size:18px}
+.ctrl button:hover{background:var(--cielo)}
+.carril{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--filo) transparent}
+.voz{scroll-snap-align:start;flex:0 0 min(420px,86%);background:var(--crema);border-radius:10px;padding:30px 28px;margin:0;position:relative}
+.voz::before{content:"“";position:absolute;top:2px;left:22px;font:500 64px/1 var(--serif);color:var(--terra);opacity:.55}
+.voz blockquote{margin:22px 0 22px;font:500 20px/1.5 var(--serif);color:var(--honda)}
+.voz figcaption{font-size:14px;letter-spacing:.06em;color:var(--salvia);font-weight:500}
+
 
 /* sobre mí */
 .sobre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center}
-.sobre img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 35%;border-radius:2px}
-.sobre .hola{font:italic 400 clamp(40px,4.6vw,60px)/1 var(--serif);color:var(--lago);margin:0 0 14px}
+.sobre img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 35%;border-radius:999px 999px 8px 8px}
+.sobre .hola{font:italic 500 clamp(44px,5vw,66px)/1 var(--serif);color:var(--terra);margin:0 0 14px}
 .sobre .lead{margin-bottom:28px}
 .rasgos{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 34px;padding:0;list-style:none}
-.rasgos li{border:1px solid var(--filo);border-radius:999px;padding:7px 16px;font-size:14px;color:var(--honda)}
+.rasgos li{background:color-mix(in srgb,var(--salvia) 14%,transparent);border:1px solid color-mix(in srgb,var(--salvia) 35%,transparent);border-radius:999px;padding:7px 16px;font-size:14px;color:var(--honda)}
 
 /* contacto */
 .lago{height:clamp(160px,22vw,300px);background:var(--cielo)}
@@ -145,10 +150,10 @@ form .btn{border:0;cursor:pointer;justify-self:start}
 .muestra{font-size:13px;color:var(--suave);margin-top:6px}
 
 /* pie */
-footer{border-top:1px solid var(--filo);padding:56px 0 34px;font-size:15px}
+footer{background:var(--papel);border-top:1px solid var(--filo);padding:56px 0 34px;font-size:15px}
 .pie-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
-.pie-grid img{width:260px;mix-blend-mode:multiply}
-:root[data-theme=dark] .pie-grid img{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen}
+.pie-logo{display:flex;align-items:center;gap:12px;font:500 30px/1 var(--serif);color:var(--honda)}.pie-logo i{font-weight:400;color:var(--salvia)}.pie-logo img{width:56px;mix-blend-mode:multiply}.pie-logo small{display:block;font:500 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lago);margin-top:8px}
+:root[data-theme=dark] .pie-logo img{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen}
 footer h4{font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lago);margin:8px 0 18px}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 footer a{text-decoration:none}footer a:hover{text-decoration:underline}
@@ -191,7 +196,7 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
 
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#inicio" aria-label="Psicalma el alma, inicio"><img src="img/logo-linea.jpg" alt="Psicalma el alma"></a>
+    <a class="logo" href="#inicio" aria-label="Psicalma el alma, inicio"><img src="img/emblema-linea.png" alt="">Psicalma <i>el alma</i></a>
     <nav id="menu" aria-label="Principal">
       <ul>
         <li><a href="#inicio" aria-current="page">Inicio</a></li>
@@ -405,7 +410,7 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
 <footer>
   <div class="wrap">
     <div class="pie-grid">
-      <div><img src="img/logo-rosa.jpg" alt="Psicalma el alma · Cristina Rosa Gil, psicóloga"></div>
+      <div class="pie-logo"><img src="img/emblema-linea.png" alt=""><div>Psicalma <i>el alma</i><small>Cristina Rosa Gil · Psicóloga</small></div></div>
       <div>
         <h4>¿Dónde estamos?</h4>
         <ul><li>Online</li><li>Próxima apertura presencial en Cáceres</li></ul>
