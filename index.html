@@ -16,7 +16,7 @@
    TYPE   Playfair Display (titulares y notas) + DM Sans ligera (texto)
    LAYOUT bandas a todo el ancho, rejilla de 12 columnas, notas laterales separadas por un filo vertical */
 :root{color-scheme:light dark;
-  --crema:light-dark(#FFFDF8,#14212A);--papel:light-dark(#F7F3EA,#1A2A35);--arena:light-dark(#EFE8DA,#1E2E38);--salvia:light-dark(#7E9475,#A9BDA0);--ocre:light-dark(#C9A25E,#D9B97A);--terra:light-dark(#C47C5A,#E0A383);
+  --crema:light-dark(#FFFDF8,#14212A);--papel:light-dark(#F4F8F8,#1A2A35);--arena:light-dark(#E4F0F5,#1E2E38);--salvia:light-dark(#7E9475,#A9BDA0);--ocre:light-dark(#C9A25E,#D9B97A);--terra:light-dark(#497D9D,#8DBAD3);
   --cielo:light-dark(#D1E7F1,#203747);--lago:light-dark(#497D9D,#8DBAD3);
   --honda:light-dark(#365C74,#D1E7F1);--tinta:light-dark(#2C4D62,#EDEBE3);
   --suave:light-dark(#5E7A8C,#A9C0CE);--filo:light-dark(rgba(54,92,116,.22),rgba(209,231,241,.18));
@@ -58,7 +58,7 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 .bar .btn{min-height:44px;padding:0 20px;font-size:14px}
 
 /* portada */
-.hero{position:relative;padding:clamp(44px,6vw,84px) 0 clamp(48px,6vw,90px);background:var(--crema) url(img/fondo-dehesa.jpg) center bottom/cover no-repeat;isolation:isolate}
+.hero{position:relative;padding:clamp(44px,6vw,84px) 0 clamp(48px,6vw,90px);background:var(--crema) url(img/fondo-lago.jpg) center bottom/cover no-repeat;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,color-mix(in srgb,var(--crema) 94%,transparent) 0%,color-mix(in srgb,var(--crema) 80%,transparent) 48%,color-mix(in srgb,var(--crema) 30%,transparent) 100%)}
 .hero-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;border-bottom:1px solid var(--filo);padding-bottom:26px}
 .btn-s{background:color-mix(in srgb,var(--crema) 70%,transparent)}
@@ -120,7 +120,7 @@ nav a:hover,nav a[aria-current]{border-color:var(--lago)}
 .ctrl button:hover{background:var(--cielo)}
 .carril{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--filo) transparent}
 .voz{scroll-snap-align:start;flex:0 0 min(420px,86%);background:var(--crema);border-radius:10px;padding:30px 28px;margin:0;position:relative}
-.voz::before{content:"“";position:absolute;top:2px;left:22px;font:500 64px/1 var(--serif);color:var(--terra);opacity:.55}
+.voz::before{content:"“";position:absolute;top:2px;left:22px;font:500 64px/1 var(--serif);color:var(--salvia);opacity:.6}
 .voz blockquote{margin:22px 0 22px;font:500 20px/1.5 var(--serif);color:var(--honda)}
 .voz figcaption{font-size:14px;letter-spacing:.06em;color:var(--salvia);font-weight:500}
 
