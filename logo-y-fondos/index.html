@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psicalma · Logo y fondos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* VOICE  cercano y natural, como le pide Cristina: menos clínico, más papel y campo
+   IDEA   un cuaderno de acuarelas: cada propuesta de logo es una lámina sobre papel
+   PICTURE los emblemas de acuarela de Magnific y la dehesa con el olivo
+   COLOUR azul y blanco mandan; salvia, ocre y terracota acompañan
+   TYPE   Cormorant Garamond y Pinyon Script para la marca, DM Sans para las notas
+   LAYOUT tres láminas en fila, paleta, y una portada de muestra con el fondo natural */
+:root{color-scheme:light;--papel:#F7F3EA;--crema:#F2EFE5;--blanco:#FFFDF8;--cielo:#D1E7F1;--lago:#497D9D;--honda:#365C74;--salvia:#8FA386;--ocre:#C9A25E;--terra:#C47C5A;--tinta:#2C4D62;--filo:rgba(54,92,116,.18)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--papel);color:var(--tinta);font:300 16px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:clip}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(5vw,18px)}
+header{padding:56px 0 24px}
+h1{font:400 clamp(36px,5vw,58px)/1.02 "Cormorant Garamond",Georgia,serif;color:var(--honda);margin:0 0 14px;text-wrap:balance}
+h2{font:400 clamp(28px,3.4vw,40px)/1.1 "Cormorant Garamond",Georgia,serif;color:var(--honda);margin:0 0 8px}
+.intro{max-width:62ch;margin:0}
+section{padding:40px 0}
+.laminas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:24px}
+.lamina{background:var(--blanco);border:1px solid var(--filo);border-radius:6px;padding:28px 24px 22px;display:flex;flex-direction:column}
+.lamina .letra{font:500 12px/1 "DM Sans";letter-spacing:.14em;text-transform:uppercase;color:var(--lago);margin:0 0 18px}
+.marca{background:var(--crema);border-radius:4px;min-height:290px;display:grid;place-items:center;padding:26px 16px;text-align:center}
+.marca img{mix-blend-mode:multiply}
+.lamina h3{font:400 24px/1.2 "Cormorant Garamond",serif;color:var(--honda);margin:20px 0 6px}
+.lamina p{margin:0 0 16px;font-size:15px}
+.mini{display:flex;gap:12px;align-items:center;border-top:1px solid var(--filo);padding-top:14px;margin-top:auto}
+.mini span{font-size:12px;color:#6c8494}
+.chip{width:46px;height:46px;border-radius:50%;background:var(--crema);display:grid;place-items:center;overflow:hidden}
+.chip img{width:80%;mix-blend-mode:multiply}
+.oscuro{width:46px;height:46px;border-radius:50%;background:var(--honda);display:grid;place-items:center;color:var(--crema);font:400 26px/1 "Pinyon Script"}
+/* A */
+.a .emb{width:150px}
+.a .nombre{font:400 46px/1 "Pinyon Script",cursive;color:var(--honda);margin:-6px 0 6px}
+.a .sub{font:500 11px/1 "DM Sans";letter-spacing:.2em;text-transform:uppercase;color:var(--lago)}
+/* B */
+.b .marca{position:relative}
+.b .corona{width:230px;position:relative;display:grid;place-items:center}
+.b .corona img{width:100%}
+.b .dentro{position:absolute;inset:0;display:grid;place-content:center;gap:2px}
+.b .dentro b{font:500 33px/1 "Cormorant Garamond",serif;color:var(--honda);letter-spacing:.02em}
+.b .dentro i{font:italic 400 21px/1 "Cormorant Garamond",serif;color:var(--salvia)}
+.b .sub{font:500 10px/1 "DM Sans";letter-spacing:.2em;text-transform:uppercase;color:var(--lago);margin-top:14px}
+/* C */
+.c .lockup{display:flex;align-items:center;gap:14px;text-align:left}
+.c .emb{width:62px}
+.c .nombre{font:500 34px/1 "Cormorant Garamond",serif;color:var(--honda);letter-spacing:.01em}
+.c .nombre i{font-weight:400;color:var(--salvia)}
+.c .sub{display:block;font:500 10px/1 "DM Sans";letter-spacing:.2em;text-transform:uppercase;color:var(--lago);margin-top:8px}
+/* paleta */
+.paleta{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:20px}
+.color{border-radius:6px;overflow:hidden;border:1px solid var(--filo);background:var(--blanco)}
+.color div{height:84px}
+.color p{margin:0;padding:10px 12px;font-size:13px;line-height:1.35}
+.color b{display:block;font-weight:500}
+.rol{font-size:12px;color:#6c8494}
+/* portada de muestra */
+.muestra{position:relative;border-radius:8px;overflow:hidden;margin-top:22px;border:1px solid var(--filo);background:var(--crema)}
+.muestra .fondo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 70%}
+.muestra .velo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,253,248,.92) 0%,rgba(255,253,248,.78) 42%,rgba(255,253,248,0) 70%)}
+.muestra .cont{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:30px;align-items:center;padding:clamp(28px,5vw,64px)}
+.muestra nav{position:relative;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(28px,5vw,64px);border-bottom:1px solid rgba(54,92,116,.12);background:rgba(255,253,248,.7)}
+.muestra nav .logo{display:flex;align-items:center;gap:10px;font:500 22px/1 "Cormorant Garamond",serif;color:var(--honda)}
+.muestra nav .logo img{width:30px;mix-blend-mode:multiply}
+.muestra nav .logo i{color:var(--salvia);font-weight:400}
+.muestra nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:13px}
+.muestra h4{font:400 clamp(34px,4.4vw,56px)/1.02 "Cormorant Garamond",serif;color:var(--honda);margin:0 0 16px}
+.muestra h4 em{color:var(--terra);font-style:italic}
+.muestra .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:999px;font:500 14px/1 "DM Sans";text-decoration:none}
+.btn-p{background:var(--honda);color:var(--blanco)}
+.btn-s{border:1px solid var(--salvia);color:#53684c;background:rgba(255,253,248,.6)}
+.foto{border-radius:200px 200px 6px 6px;overflow:hidden;aspect-ratio:4/5;border:6px solid var(--blanco);box-shadow:0 18px 40px -24px rgba(44,77,98,.45)}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.texturas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
+.texturas figure{margin:0;background:var(--blanco);border:1px solid var(--filo);border-radius:6px;overflow:hidden}
+.texturas img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.texturas figcaption{padding:12px 16px;font-size:14px}
+.nota{font-size:13px;color:#6c8494;margin-top:14px}
+@media(max-width:900px){.laminas,.texturas{grid-template-columns:minmax(0,1fr)}.paleta{grid-template-columns:repeat(4,minmax(0,1fr))}.muestra .cont{grid-template-columns:minmax(0,1fr)}.muestra .velo{background:rgba(255,253,248,.82)}.muestra nav ul{display:none}.foto{max-width:300px}}
+@media(max-width:520px){.paleta{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>Psicalma: propuestas de logo y una paleta más natural</h1>
+  <p class="intro">Respuesta a los comentarios de Cristina. El azul y el blanco siguen siendo los colores principales. Les acompañan verdes salvia y tonos tierra del kit Umbral, con fondos de acuarela, papel y campo para que la web se sienta más cercana y menos clínica.</p>
+</header>
+
+<section class="wrap">
+  <h2>Tres propuestas de logo</h2>
+  <div class="laminas">
+    <article class="lamina a">
+      <p class="letra">Propuesta A</p>
+      <div class="marca"><div>
+        <img class="emb" src="img/emblema-rosa.png" alt="Rosa blanca en acuarela con una rama de olivo" style="margin:0 auto">
+        <div class="nombre">Psicalma el alma</div>
+        <div class="sub">Cristina Rosa Gil · Psicóloga</div>
+      </div></div>
+      <h3>La rosa, más viva</h3>
+      <p>Una evolución del logo actual: mantiene la rosa y la letra manuscrita, pero la rosa se pinta en acuarela azul con una ramita de olivo verde y ocre.</p>
+      <div class="mini"><div class="chip"><img src="img/emblema-rosa.png" alt=""></div><div class="oscuro">P</div><span>Versiones para el perfil de Instagram y el icono de la web</span></div>
+    </article>
+
+    <article class="lamina b">
+      <p class="letra">Propuesta B</p>
+      <div class="marca"><div>
+        <div class="corona"><img src="img/emblema-corona.png" alt="Corona de olivo en acuarela con flores azules"><div class="dentro"><b>Psicalma</b><i>el alma</i></div></div>
+        <div class="sub">Cristina Rosa Gil · Psicóloga</div>
+      </div></div>
+      <h3>La corona de olivo</h3>
+      <p>Un sello circular con una rama de olivo y flores azules. Es la opción más cálida y natural, y funciona muy bien en redes y en papelería.</p>
+      <div class="mini"><div class="chip"><img src="img/emblema-corona.png" alt=""></div><div class="oscuro" style="font:500 20px/1 'Cormorant Garamond'">Pa</div><span>El sello sirve tal cual como foto de perfil</span></div>
+    </article>
+
+    <article class="lamina c">
+      <p class="letra">Propuesta C</p>
+      <div class="marca">
+        <div class="lockup">
+          <img class="emb" src="img/emblema-linea.png" alt="Rosa dibujada con una sola línea azul y una hoja verde">
+          <div><div class="nombre">Psicalma <i>el alma</i></div><span class="sub">Cristina Rosa Gil · Psicóloga</span></div>
+        </div>
+      </div>
+      <h3>La rosa de una sola línea</h3>
+      <p>La versión más limpia y moderna: una rosa dibujada de un trazo, con una hoja de acuarela. Se lee bien en pequeño, en la cabecera de la web.</p>
+      <div class="mini"><div class="chip"><img src="img/emblema-linea.png" alt="" style="width:46%"></div><div class="oscuro" style="font:italic 400 24px/1 'Cormorant Garamond'">P</div><span>Es la que mejor aguanta a tamaño muy pequeño</span></div>
+    </article>
+  </div>
+  <p class="nota">Los emblemas están hechos con Magnific. Los textos van en tipografía real (Pinyon Script y Cormorant Garamond), así que se pueden ajustar sin regenerar nada.</p>
+</section>
+
+<section class="wrap">
+  <h2>Paleta: azul y blanco, con verde y tierra</h2>
+  <div class="paleta">
+    <div class="color"><div style="background:#FFFDF8"></div><p><b>Blanco cálido</b>#FFFDF8<br><span class="rol">Principal · fondos</span></p></div>
+    <div class="color"><div style="background:#365C74"></div><p><b>Agua honda</b>#365C74<br><span class="rol">Principal · textos y botones</span></p></div>
+    <div class="color"><div style="background:#497D9D"></div><p><b>Lago sereno</b>#497D9D<br><span class="rol">Principal · detalles</span></p></div>
+    <div class="color"><div style="background:#D1E7F1"></div><p><b>Cielo claro</b>#D1E7F1<br><span class="rol">Principal · bloques</span></p></div>
+    <div class="color"><div style="background:#8FA386"></div><p><b>Salvia</b>#8FA386<br><span class="rol">Acompaña · hojas, iconos</span></p></div>
+    <div class="color"><div style="background:#C9A25E"></div><p><b>Ocre</b>#C9A25E<br><span class="rol">Acompaña · pequeños acentos</span></p></div>
+    <div class="color"><div style="background:#C47C5A"></div><p><b>Terracota</b>#C47C5A<br><span class="rol">Acompaña · una palabra, un detalle</span></p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Cómo cambiaría la portada</h2>
+  <p class="intro">Una muestra rápida con la propuesta C y el fondo de la dehesa: el mismo contenido, pero con más luz, campo y calidez.</p>
+  <div class="muestra">
+    <img class="fondo" src="img/fondo-dehesa.jpg" alt="">
+    <div class="velo"></div>
+    <nav><span class="logo"><img src="img/emblema-linea.png" alt="">Psicalma <i>el alma</i></span><ul><li>Inicio</li><li>Sobre mí</li><li>Terapias</li><li>Cuentos para el alma</li><li>Contacto</li></ul></nav>
+    <div class="cont">
+      <div>
+        <h4>Terapia para sanar heridas del pasado <em>y volver a conectar.</em></h4>
+        <p style="max-width:40ch;margin:0">Con tus emociones, tus vínculos y tu verdadera esencia.</p>
+        <div class="btns"><a class="btn btn-p" href="https://www.doctoralia.es/cristina-rosa-gil/psicologo/madrid">Reserva tu cita aquí</a><a class="btn btn-s" href="https://wa.me/34685012492">Escríbeme por WhatsApp</a></div>
+      </div>
+      <div class="foto"><img src="img/cristina-olivo.jpg" alt="Cristina Rosa Gil junto a un olivo"></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:72px">
+  <h2>Fondos naturales para las secciones</h2>
+  <div class="texturas">
+    <figure><img src="img/fondo-dehesa.jpg" alt="Acuarela de un olivo en un prado con cielo azul claro"><figcaption><b>Dehesa en acuarela.</b> Para la portada o la franja de contacto: cielo despejado arriba para el texto.</figcaption></figure>
+    <figure><img src="img/fondo-papel-sombra.jpg" alt="Papel crema con sombras de hojas de olivo y manchas de acuarela verde"><figcaption><b>Papel con sombra de olivo.</b> Para bloques como «Sobre mí» o las opiniones, en lugar de los fondos lisos.</figcaption></figure>
+  </div>
+</section>
+</body>
+</html>
